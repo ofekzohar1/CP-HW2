@@ -34,7 +34,6 @@ int q = 1000000007;
 
 void sol() {
     
-    return;
 }
 
 int main() {
