@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.23)
+project(cp_templates)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(A1 A1/A1.cpp)
+add_executable(B2 B2/B2.cpp)
+add_executable(C3 C3/C3.cpp)
+add_executable(D4 D4/D4.cpp)
+add_executable(E5 E5/E5.cpp)
+add_executable(F6 F6/F6.cpp)
+add_executable(G7 G7/G7.cpp)
+add_executable(H8 H8/H8.cpp)
+add_executable(I9 I9/I9.cpp)
+add_executable(J10 J10/J10.cpp)
