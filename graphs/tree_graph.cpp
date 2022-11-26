@@ -19,6 +19,7 @@ void dfs_tree(int V) {
 }
 
 // get children of the bfs tree of root.
+// This function fills the children VVI with the tree information.
 void get_children_of_tree_from_undirected_graph(int n, int root) {
     children = vector<vector<int>>(n+1);
     vector<bool> already_handled = vector<bool>(n+1);
