@@ -2,7 +2,14 @@
 /*
  *
  Tarjan's algorithm for finding strongly connected components (SCC)
- 
+
+ Need to initalize d, low, scc, stacked (see below)
+
+ Output is scc vector, gives each node the index of its connected component (zero based)
+
+ At the end of the run, current_scc has the number of SCCs in the graph
+
+
  Complexity: O(E + V)
  d[i] = Discovery time of node i. (Initialize to -1)
  low[i] = Lowest discovery time reachable from node i. 
@@ -11,24 +18,14 @@
  ticks = Clock used for discovery times (Initialize to 0)
  *current_scc = ID of the current_scc being discovered
  (Initialize to 0)
- 
- 
- Some analysis:
-  - DFS gives us a forest of connected trees
-  - SCCs are subtrees of DFS trees.
-  - The head of a subtree which is a SCC can be the representative of the SCC.
-  - There is no back-edge and no cross-edge from one SCC to another.
-	* (If there is a back-edge -> same SCC)
-	* (There might be a cross edge but it will not be used (need more info on this maybe))
-  - 
- 
+
  */
 
-vector<int> g[MAXN];
-int d[MAXN], low[MAXN], scc[MAXN];
-bool stacked[MAXN];
+//vector<vector<int>> g; This is in the general template already
+vector<int> d, low, scc;
+vector<bool> stacked;
 stack<int> s;
-int ticks, current_scc;
+int ticks=0, current_scc=0;
 void tarjan(int u){
     d[u] = low[u] = ticks++;
     s.push(u);
@@ -55,3 +52,19 @@ void tarjan(int u){
     }
 }
 
+/// Put in main/sol (n is number of vertices)
+g=vector<vector<int>>(n+1);
+d=vector<int>(n+1);
+low=vector<int>(n+1);
+scc=vector<int>(n+1);
+stacked=vector<bool>(n+1);
+for (int i=0;i<=n;i++) {
+    d[i]=-1;
+}
+
+/// Usage:
+for (int i=1; i<=n; i++) { // Important to only start at 1!
+    if (d[i]==-1) {
+        tarjan(i);
+    }
+}
