@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <cmath>
 #include <stack>
+#include <climits>
 
 using namespace std;
 typedef long long ll;
