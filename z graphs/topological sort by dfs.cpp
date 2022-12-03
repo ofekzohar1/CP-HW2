@@ -42,7 +42,7 @@ bool topological_sorting(int n) {
     for(int i=1; i<=n; i++) color[i]=WHITE;
 
     // dfs from each node
-    back_edge_spotted=0; p=n-1;
+    back_edge_spotted=0; p=n;
     for(int i=1; i<=n; i++) {
         if(!color[i]) {
             dfs(i);
