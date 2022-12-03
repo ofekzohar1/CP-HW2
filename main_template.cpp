@@ -17,6 +17,9 @@ typedef long long ll;
 
 using VI = std::vector<int>;
 using VVI = std::vector<VI>;
+using VL = std::vector<ll>;
+using VVL = std::vector<VL>;
+
 
 typedef pair<int,int> pi;
 typedef tuple<int, int, int> triple;
