@@ -1,5 +1,5 @@
 //  NOTE: you need to allocate space and fill g first!
-//  NOTE: we assume indices 1 to n!! (1 based index)
+//  NOTE: we assume indices 1 to n, in input (g) and output (order)!! (1 based index)
 /* 
  * Topological sorting by dfs (and cycle detection).
  * - We start dfs from a white node: there's a cycle iff there's a backedge.
