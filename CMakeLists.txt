@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 project(cp_templates)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
 add_executable(A1 A1/A1.cpp)
 add_executable(B2 B2/B2.cpp)

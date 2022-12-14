@@ -29,9 +29,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d56f2564-e374-473b-bed8-a93aec1b6d65" name="Changes" comment="">
+    <list default="true" id="d56f2564-e374-473b-bed8-a93aec1b6d65" name="Changes" comment="A1 - with Doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A1/A1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/A1/A1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B2/B2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/B2/B2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C3/C3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C3/C3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D4/D4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/D4/D4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E5/E5.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/E5/E5.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F6/F6.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/F6/F6.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
     </list>
@@ -60,21 +65,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="CMake Application.A1">
+}</component>
+  <component name="RunManager" selected="CMake Application.B2">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="A1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://../" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp_templates" TARGET_NAME="A1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp_templates" RUN_TARGET_NAME="A1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -125,11 +135,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.A1" />
       <item itemvalue="CMake Application.B2" />
@@ -152,8 +157,25 @@
       <option name="presentableId" value="Default" />
       <updated>1669497879004</updated>
       <workItem from="1669497880462" duration="171000" />
-      <workItem from="1670771566874" duration="7919000" />
+      <workItem from="1670771566874" duration="8002000" />
+      <workItem from="1670791015266" duration="21000" />
+      <workItem from="1670972512571" duration="12407000" />
     </task>
+    <task id="LOCAL-00001" summary="A1 - Final, no Doc">
+      <created>1670790878485</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670790878485</updated>
+    </task>
+    <task id="LOCAL-00002" summary="A1 - with Doc">
+      <created>1670975472129</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670975472129</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,5 +191,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="A1 - Final, no Doc" />
+    <MESSAGE value="A1 - with Doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="A1 - with Doc" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="g" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

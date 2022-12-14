@@ -1,16 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <map>
-#include <set>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <algorithm>
-#include <queue>
-#include <iomanip>
-#include <cmath>
-#include <stack>
-#include <climits>
+#include <bits/stdc++.h>
 
 using namespace std;
 typedef long long ll;
