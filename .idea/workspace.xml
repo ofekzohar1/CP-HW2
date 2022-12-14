@@ -29,14 +29,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d56f2564-e374-473b-bed8-a93aec1b6d65" name="Changes" comment="A1 - with Doc">
+    <list default="true" id="d56f2564-e374-473b-bed8-a93aec1b6d65" name="Changes" comment="C3 - not good">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B2/B2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/B2/B2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A1/A1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/A1/A1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/C3/C3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C3/C3.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D4/D4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/D4/D4.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E5/E5.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/E5/E5.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F6/F6.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/F6/F6.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
     </list>
@@ -79,7 +75,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.B2">
+  <component name="RunManager" selected="CMake Application.C3">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -159,7 +155,7 @@
       <workItem from="1669497880462" duration="171000" />
       <workItem from="1670771566874" duration="8002000" />
       <workItem from="1670791015266" duration="21000" />
-      <workItem from="1670972512571" duration="12407000" />
+      <workItem from="1670972512571" duration="33606000" />
     </task>
     <task id="LOCAL-00001" summary="A1 - Final, no Doc">
       <created>1670790878485</created>
@@ -175,7 +171,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670975472129</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="B2 - with Doc">
+      <created>1671005602501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671005602501</updated>
+    </task>
+    <task id="LOCAL-00004" summary="C3 - not good">
+      <created>1671018376581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671018376581</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +205,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A1 - Final, no Doc" />
     <MESSAGE value="A1 - with Doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="A1 - with Doc" />
+    <MESSAGE value="B2 - with Doc" />
+    <MESSAGE value="C3 - not good" />
+    <option name="LAST_COMMIT_MESSAGE" value="C3 - not good" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

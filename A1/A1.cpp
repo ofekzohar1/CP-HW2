@@ -130,6 +130,9 @@ void shortestPathTopoSort(vector<pi> &minCmaxP, int n) {
 
 /*********** Solution *****************/
 
+/**
+ * complexity: Topo sort & shortest path in DAG - O(N). fill dp - O(B*N). total: O(B*N).
+ */
 void sol() {
     int B, N;
     cin >> B >> N;

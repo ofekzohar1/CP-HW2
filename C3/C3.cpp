@@ -14,113 +14,76 @@ typedef tuple<int, int, int> triple;
 #define PB push_back
 #define MP make_pair
 #define REP(i, start, stop) for (int i = (start); i <= (stop); i++)
-#define arrin(a,n) for(int INPUT=0;INPUT<n;INPUT++)cin>>a[INPUT]
 
+VVI g, g_transpose; // G^T - same nodes, edges change direction
+vector<bool> visible;
 
-vector<vector<int>> g; vector<bool> visible;
-
-/*********** Topo Sort *****************/
-
-#define WHITE 0
-#define GREY 1
-#define BLACK 2
-
-VI order; // Contain topological order
-VI color; // Colors array for dfs
-int back_edge_spotted = 0;
-int p;
-
-// DFS implementation
-void dfs(int v) {
-    if (color[v] == GREY) back_edge_spotted = 1;
-    if (color[v] != WHITE) return;
-    color[v] = GREY;
-    for (int neighbor: g[v]) {
-        dfs(neighbor);
-    }
-    color[v] = BLACK;
-    order[p] = v;
-    p--;
-}
-
-/**
- * Fills order with the order of the topological sort
- * Returns true iff no cycle was found.
- * n is the number of vertices in the graph - assumed to be 1 to n!!!
- */
-bool topological_sorting(int n) {
-    // init
-    color = vector<int>(n + 1);
-    order = vector<int>(n + 1);
-    for (int i = 1; i <= n; i++) color[i] = WHITE;
-
-    // dfs from each node
-    back_edge_spotted = 0;
-    p = n;
-    for (int i = 1; i <= n; i++) {
-        if (!color[i]) {
-            dfs(i);
-            if (back_edge_spotted) {
-                return false;
-            }
-        };
-    }
-    return true;
-}
-
-void create_and_parse_directed_graph(int n, int m, vector<bool>& inDegZero) {
+void create_and_parse_directed_graph(int n, int m) {
     g = VVI(n+1);
+    g_transpose = VVI(n+1);
     REP(i,1,m) {
         int a_i, b_i; cin >> a_i >> b_i;
         g[a_i+1].push_back(b_i+1);
-        inDegZero[b_i+1] = false; // edge (a_i,b_i) exist so b_i's indegree >= 1
+        g_transpose[b_i+1].push_back(a_i+1);
     }
 }
 
-VI longest_paths_in_dag(int n) {
-    VI dist(n + 1);
-    int u;
-    REP(i,0,n) {
-        u = order[i];
-        for (int v : g[u]) {
-            if (dist[v] < dist[u] + 1)
-                dist[v] = dist[u] + 1;
+/** Calculate x's # of descendants using BFS
+ *
+ * @param graph The graph
+ * @param x source node
+ * @param n # of nodes in the graph
+ * @return x's # of descendants
+ */
+int bfs_cnt_descendants(VVI& graph ,int x, int n) {
+    REP(i,1,n) visible[i] = false;
+    visible[x]=true;
+    vector<int> cur_level={x};
+    int cnt_descendants = 1;
+    while (!cur_level.empty()) {
+        vector<int> next_level;
+        for(int f : cur_level) {
+            for(int s : graph[f]) {
+                if (visible[s]) continue;
+                visible[s]=true;
+                next_level.push_back(s);
+                cnt_descendants++;
+            }
         }
+        cur_level = next_level;
     }
-    return dist;
+    return cnt_descendants;
 }
 
+/**
+ * Key Observation #1: for a fixed node u, all u's descendants (u outperform those) cannot be promoted unless
+ * u is promoted. All other nodes can/cannot be promoted regardless of u's promotion (they dont share performance relation)
+ * So u won't be promoted iff we have enough emp to promote without u and his descendents.
+ * We can use BFS to determine # of des for each node.
+ *
+ * Key Observation #2: for a fixed node u, all u's ancestors (those outperform u) must be promoted before u.
+ * If u's # of ans' is bigger than B so u will never be promoted!
+ * We can use BFS on the transposed graph to determine # of ans' for each node.
+ *
+ * complexity: O(|V|(|V|+|E|))=O(E*P+E^2), 2 bfs for each node.
+ */
 void sol() {
     int A, B, E, P;
     cin >> A >> B >> E >> P;
-    vector<bool> inDegZero = vector<bool>(E+1, true); //boolean array whose every node with indegree zero gets true
-    create_and_parse_directed_graph(E, P, inDegZero);
+    create_and_parse_directed_graph(E, P);
 
-    REP(i, 1, E) { // Connect '0' node to all source nodes (nodes with indegree 0)
-        if (inDegZero[i])
-            g[0].push_back(i);
-    }
-    topological_sorting(E);
-    VI nodes_layers_map = longest_paths_in_dag(E);
+    int A_must_prom = 0, B_must_prom = 0, B_never_prom = 0, u_des, u_ans;
+    visible = vector<bool>(E+1);
+    REP(u,1,E) {
+        u_des = bfs_cnt_descendants(g, u, E);
+        A_must_prom += E - u_des < A ? 1 : 0; // if E - u_des < A so we can promote at least another emp, promote u
+        B_must_prom += E - u_des < B ? 1 : 0; // Same as above
 
-    int max_layer = *max_element(nodes_layers_map.begin(), nodes_layers_map.end());
-    VI num_of_nodes_by_layer(max_layer + 1);
-    REP(i,1,E) num_of_nodes_by_layer[nodes_layers_map[i]]++;
-    int cnt = 0, next_cnt;
-    bool A_res_printed = false, B_res_printed = false;
-    REP(i,1,max_layer) {
-        next_cnt = cnt + num_of_nodes_by_layer[i];
-        if (!A_res_printed && next_cnt >= A) {
-            cout << (next_cnt == A ? A : cnt) << "\n";
-            A_res_printed = true;
-        }
-        if (next_cnt >= B) {
-            cout << (next_cnt == B ? B : cnt) << "\n";
-            cout << E-next_cnt << "\n";
-            break;
-        }
-        cnt = next_cnt;
+        u_ans = bfs_cnt_descendants(g_transpose, u, E); // u's descendant in G^T is an ancestor in G
+        B_never_prom += u_ans > B ? 1 : 0; // We must promote all u's ans' before u but they are more than B!
     }
+
+    cout << A_must_prom << "\n" << B_must_prom << "\n" << B_never_prom;
 }
 
 int main() {
@@ -134,6 +97,6 @@ int main() {
     freopen("output.txt", "w", stdout);
 
 #endif
-        sol();
+    sol();
     return 0;
 }

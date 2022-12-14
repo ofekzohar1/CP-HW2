@@ -124,6 +124,11 @@ bool isCyclic(int n) {
     }
 }
 
+/** Build graph of the needles coordinates & 2nd graph of the needles cord projection on XY plane.
+ * Cycle in either graphs means closed chains (floor or true corresponding to the graph).
+ *
+ * complexity: 2 DFS to determine if graph is cyclic - O(K);
+ */
 void sol() {
     int K, n, N; cin >> K;
 
