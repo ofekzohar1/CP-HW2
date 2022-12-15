@@ -1,4 +1,16 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <map>
+#include <set>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <algorithm>
+#include <queue>
+#include <iomanip>
+#include <cmath>
+#include <stack>
+#include <climits>
 
 using namespace std;
 typedef long long ll;
@@ -14,56 +26,16 @@ typedef tuple<int, int, int> triple;
 #define PB push_back
 #define MP make_pair
 
-#define arrin(a,n) for(int INPUT=1;INPUT<=n;INPUT++)cin>>a[INPUT]
+#define arrin(a,n) for(int INPUT=0;INPUT<n;INPUT++)cin>>a[INPUT]
 
 
-VVI g;
-vector<ll> sum_cit, sum_leaf;
+vector<vector<int>> g; vector<bool> visible;
+vector<vector<int>> children;
 
-void dfs(int u, ll &sol) {
-    sum_leaf[u] = g[u].empty() ? 1 : 0; // g[u].empty() true == u is a leaf
-    for (auto v : g[u]) {
-        dfs(v, sol); // Apply DFS rec
-        sum_cit[u] += sum_cit[v]; // Sum all subtree
-        sum_leaf[u] += sum_leaf[v];
-    }
-    if (sum_cit[u] % sum_leaf[u] == 0)
-        sol = max(sol, sum_cit[u] / sum_leaf[u]);
-    else // People cannot be divided, so we need to add 1 to the maximum
-        sol = max(sol, sum_cit[u] / sum_leaf[u] + 1);
-}
+int q = 1000000007;
 
-void create_and_parse_directed_graph(int n, int m) {
-    g = VVI(n+1);
-    for (int i = 1; i <= m; i++) {
-        int p_i; cin >> p_i;
-        g[p_i].PB(i+1);
-    }
-}
-
-/** Key observation - we want that the # of citizens on each leaf would be the same.
- *  The city graph i a directed tree so we could define the subtree rooted at u.
- *  we want for any subtree to distribute the citizens equally among the leafs.
- *
- *  We use the Recursice property of the DFS to calculate for each subtree (say rooted at u):
- *      sum_cit[u] := # of citizens in the subtree
- *      sum_leaf[u] := # of leafs in the subtree
- * Goal - sum_cit[u] / sum_leaf[u] (+1)
- * SOl - max_u{sum_cit[u] / sum_leaf[u]}
- *
- * complexity: DFS - O(n).
- */
 void sol() {
-    int n; cin >> n;
-    sum_cit = vector<ll>(n+1);
-    sum_leaf = vector<ll>(n+1);
 
-    create_and_parse_directed_graph(n, n-1);
-    arrin(sum_cit,n);
-
-    ll sol = 0;
-    dfs(1, sol);
-    cout << sol << "\n";
 }
 
 int main() {
@@ -77,7 +49,9 @@ int main() {
     freopen("output.txt", "w", stdout);
 
 #endif
-
-    sol();
+    int t; cin >> t;
+    while (t--) {
+        sol();
+    }
     return 0;
 }
