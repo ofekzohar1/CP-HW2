@@ -65,7 +65,7 @@ int bfs_cnt_descendants(VVI& graph ,int x, int n) {
  * If u's # of ans' is bigger than B so u will never be promoted!
  * We can use BFS on the transposed graph to determine # of ans' for each node.
  *
- * complexity: O(|V|(|V|+|E|))=O(E*P+E^2), 2 bfs for each node.
+ * complexity: O(|V|(|V|+|E|))=O(E*P+E^2), 2 bfs_board_config for each node.
  */
 void sol() {
     int A, B, E, P;

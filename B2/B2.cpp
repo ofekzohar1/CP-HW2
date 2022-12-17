@@ -91,7 +91,7 @@ pi readNeedleGraph(int K) {
     return {n, N};
 }
 
-/** Check if the undirected graph g has a cycle using bfs.
+/** Check if the undirected graph g has a cycle using bfs_board_config.
  * If a found an edge (u,v) such v already visited and v didn't discover u == cycle in g
  * We say that u is the parent of v if u discovered v using (u,v).
  *

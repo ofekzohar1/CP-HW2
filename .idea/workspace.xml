@@ -29,9 +29,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d56f2564-e374-473b-bed8-a93aec1b6d65" name="Changes" comment="D4 - final">
+    <list default="true" id="d56f2564-e374-473b-bed8-a93aec1b6d65" name="Changes" comment="F6 - final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B2/B2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/B2/B2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C3/C3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C3/C3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/E5/E5.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/E5/E5.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G7/G7.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/G7/G7.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
     </list>
@@ -75,11 +78,6 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.E5">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="A1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://../" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp_templates" TARGET_NAME="A1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp_templates" RUN_TARGET_NAME="A1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -154,7 +152,9 @@
       <workItem from="1669497880462" duration="171000" />
       <workItem from="1670771566874" duration="8002000" />
       <workItem from="1670791015266" duration="21000" />
-      <workItem from="1670972512571" duration="42803000" />
+      <workItem from="1670972512571" duration="44250000" />
+      <workItem from="1671131660273" duration="5903000" />
+      <workItem from="1671201808227" duration="25336000" />
     </task>
     <task id="LOCAL-00001" summary="A1 - Final, no Doc">
       <created>1670790878485</created>
@@ -198,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671049774159</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="E5 - final">
+      <created>1671053317967</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671053317967</updated>
+    </task>
+    <task id="LOCAL-00008" summary="F6 - final">
+      <created>1671131712641</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671131712641</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,23 +236,26 @@
     <MESSAGE value="C3 - not good" />
     <MESSAGE value="Add complexity analysis" />
     <MESSAGE value="D4 - final" />
-    <option name="LAST_COMMIT_MESSAGE" value="D4 - final" />
+    <MESSAGE value="E5 - final" />
+    <MESSAGE value="F6 - final" />
+    <option name="LAST_COMMIT_MESSAGE" value="F6 - final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/E5/E5.cpp</url>
-          <line>23</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/G7/G7.cpp</url>
+          <line>180</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="g" language="ObjectiveC" />
-        <watch expression="sum_leaf" language="ObjectiveC" />
-        <watch expression="sum_cit" language="ObjectiveC" />
+        <watch expression="board" language="ObjectiveC" />
+        <watch expression="visible" language="ObjectiveC" />
+        <watch expression="start" />
+        <watch expression="seen" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
